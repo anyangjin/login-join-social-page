@@ -1,0 +1,277 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  color: inherit;
+}
+
+button {
+  background: none;
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* //RESET */
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.wrapper {
+  margin: 100px auto;
+  width: 520px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+/* header */
+
+.header {
+  width: 100%;
+  padding: 20px 24px 18px;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #c4c4c4;
+}
+.header h1 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.header button {
+  width: 22.4px;
+  height: 0px;
+  position: absolute;
+  top: 22px;
+  right: 23px;
+  cursor: pointer;
+  transition: all ease 0.03s;
+}
+
+.header button:hover {
+  transform: scale(1.2, 1.2);
+  /* transform: rotate(); 여러가지 속성 동시에 사용 가능한 방법 찾기 */
+}
+/* //header */
+
+/* main */
+.main {
+  padding: 26px 24px 20px;
+}
+.main h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.login-id,
+.login-pw {
+  box-sizing: border-box;
+  width: 472px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 15px 16px;
+}
+.login-id {
+  border: 2px solid #f4492e;
+  margin-bottom: 8px;
+}
+.login-pw {
+  margin-top: 8px;
+  margin-bottom: 11px;
+}
+
+.notice {
+  /* box-shadow: inset 0 0 10px blue; */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #f4492e;
+  width: 139px;
+  height: 18px;
+}
+
+.login-checkbox {
+  margin-top: 11px;
+  width: 22px;
+  height: 22px;
+  background: #2f80ed;
+  background: url(./images/check-box.png) no-repeat center / contain;
+  /* contain : 틀이 작아져도 안에 그림 전체가 다보이게 / cover: 틀 비율에 맞춰 빈틈없이 그림 확대되서 보여질짐 */
+  appearance: none;
+  transition: ease 0.4s;
+  /* ease :천천히-빠름-천천히 속도 조절 */
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+.login-checkbox:checked {
+  background: url(./images/Ellipse_checkbox.png) no-repeat center / contain;
+}
+
+.checkbox-label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #767676;
+  margin-left: 8px;
+  /* margin-bottom: 21px; 왜 안 먹히지?*/
+}
+
+.login-btn {
+  width: 472px;
+  height: 50px;
+  background: #2f80ed;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-top: 21px;
+  cursor: pointer;
+}
+
+.login-join-find {
+  /* text-align: center; */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.login-join-find a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #767676;
+}
+
+.login-join-find span {
+  width: 1px;
+  height: 18px;
+  background: #767676;
+  margin-top: 0;
+}
+
+.line {
+  position: relative;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #767676;
+  margin: 30px auto 20px auto;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 1px;
+  left: 0;
+  top: 8px;
+  display: inline-block;
+  background: #c4c4c4;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 1px;
+  right: 0;
+  top: 8px;
+  display: inline-block;
+  background: #c4c4c4;
+}
+
+/* 가상요소 사용방법 공부하기.. 이해 완료*/
+/* .line::before {
+  content: "";
+  width: 210px;
+  height: 1px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #c4c4c4;
+}
+ before / after  차이점 다시 공부 , dispaly: inline-block 이해하기
+.line::after {
+  content: "";
+  width: 210px;
+  height: 1px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: #c4c4c4;
+} */
+/* //가상요소 사용방법 공부하기.. 이해 완료 */
+
+.social-account-login {
+  box-shadow: 10px inset 0 0 10px red;
+  /* gap: 10px; */
+}
+
+/* gap: ; 이용 할 수 있는 방법 찾아 보기 */
+.social-account-login :nth-child(1),
+.social-account-login :nth-child(2),
+.social-account-login :nth-child(3) {
+  margin-bottom: 10px;
+}
+
+.social-account-login button {
+  /* width: 472px; */
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  color: #767676;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.google {
+  /* box-shadow: 10px inset 0 0 10px red; */
+  border: 2px solid rgb(54, 51, 51);
+  background: url(./images/google_logo.svg) no-repeat 15.5px center / 2.5em;
+}
+.facebook {
+  border: 2px solid rgb(73, 85, 251);
+  background: url(./images/facebook_logo.svg) no-repeat 15.5px center / 2.5em;
+}
+
+.naver {
+  border: 2px solid rgb(102, 219, 73);
+  background: url(./images/naver_logo.svg) no-repeat 15.5px center / 2.5em;
+}
+
+.kakao {
+  border: 2px solid rgb(255, 222, 5);
+  background: url(./images/kakao_logo.svg) no-repeat 15.5px center / 2.5em;
+}
+
+/* //main */
